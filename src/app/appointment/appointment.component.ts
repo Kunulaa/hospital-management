@@ -10,6 +10,9 @@ import { Appointment } from '../appointment';
 export class AppointmentComponent {
   appoint:Appointment[]=[]
   constructor(private appointmentService:AppointmentService){}
+  ngOnInit():void{
+      this.getAppoint();
+  }
   getAppoint(){
    this.appointmentService.getAppointments().subscribe(data=>{
     this.appoint=data;

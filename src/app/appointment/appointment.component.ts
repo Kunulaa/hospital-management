@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppointmentService } from '../appointment.service';
 import { Appointment } from '../appointment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-appointment',
@@ -9,7 +10,7 @@ import { Appointment } from '../appointment';
 })
 export class AppointmentComponent {
   appoint:Appointment[]=[]
-  constructor(private appointmentService:AppointmentService){}
+  constructor(private appointmentService:AppointmentService, private router:Router){}
   ngOnInit():void{
       this.getAppoint();
   }
@@ -18,5 +19,13 @@ export class AppointmentComponent {
     this.appoint=data;
    })
   }
+  delete(id:number){
+    this.appointmentService.deleteAppointment(id).subscribe(data=>{
+      console.log(data);
+      this.getAppoint();
+    }
+  )
+  }
+ 
 
 }

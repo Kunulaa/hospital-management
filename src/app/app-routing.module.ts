@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdmindashComponent } from './admindash/admindash.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
-  {path:'', component:AdmindashComponent},
+  {path:'', component:AdminComponent},
   {path:'appointmentlist', component:AppointmentComponent},
   {path:'admindash',component:AdmindashComponent},
-  {path:'create', component:CreateAppointmentComponent}
+  {path:'create', component:CreateAppointmentComponent},
+  {path:'pat',component:AdmindashComponent}
 ];
 
 @NgModule({

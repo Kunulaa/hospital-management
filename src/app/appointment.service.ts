@@ -9,9 +9,12 @@ import { Appointment } from './appointment';
 export class AppointmentService {
 
   constructor(private httpClient:HttpClient) { }
-  private baseUrl="http://localhost:8080/api/v3/getall"
+  private baseUrl="http://localhost:8080/api/v3"
   getAppointments():Observable<Appointment[]>{
-      return this.httpClient.get<Appointment[]>(`${this.baseUrl}`)
+      return this.httpClient.get<Appointment[]>(`${this.baseUrl}/getall`)
+  }
+  createAppointment(appointment:Appointment):Observable<Appointment>{
+    return this.httpClient.post<Appointment>(`${this.baseUrl}/single`,appointment)
   }
 
 }

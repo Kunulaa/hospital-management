@@ -1,0 +1,27 @@
+/* Style the login links */
+.login-link {
+    font-family: 'Poppins', sans-serif; /* Use a stylish, modern font */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Medium weight for balance */
+    text-transform: uppercase; /* Uppercase for formality */
+    letter-spacing: 0.05em; /* Add letter spacing */
+    color: #ecf0f1; /* Soft teal color */
+    text-decoration: none; /* Remove underline */
+}
+
+.login-link:hover {
+    color: #66d4f3; /* Slightly lighter teal on hover */
+}
+
+/* Style the buttons */
+.btn-danger {
+    margin: 5px;
+    padding: 8px 16px; /* Add padding for better button size */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #858180d9; /* Custom red color for the button */
+    border: none; /* Remove border */
+}
+
+.btn-danger:hover {
+    background-color: #b0a9a8; /* Lighter red on hover */
+}
